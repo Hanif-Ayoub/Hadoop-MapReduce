@@ -1,4 +1,4 @@
-package com.slimani_ce.exercice2;
+package com.enset.exercice2;
 
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;

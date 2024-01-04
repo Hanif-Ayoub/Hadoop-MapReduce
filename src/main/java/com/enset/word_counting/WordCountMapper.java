@@ -1,4 +1,4 @@
-package com.slimani_ce.word_counting;
+package com.enset.word_counting;
 
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;

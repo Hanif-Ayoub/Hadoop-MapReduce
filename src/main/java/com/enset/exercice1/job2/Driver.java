@@ -1,5 +1,4 @@
-package com.slimani_ce.exercice1.job1;
-
+package com.enset.exercice1.job2;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
@@ -12,8 +11,15 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
 public class Driver {
     public static void main(String[] args) throws Exception {
+        if (args.length < 3) {
+            System.err.println("Usage: Driver <input-path> <output-path> <year>");
+            System.exit(1);
+        }
+
         Configuration conf = new Configuration();
-        Job job = Job.getInstance(conf);
+        conf.set("year", args[2]); // Set the year in the configuration
+
+        Job job = Job.getInstance(conf, "TotalProductSalesPerCity");
 
         job.setJarByClass(Driver.class);
         job.setMapperClass(JobMapper.class);

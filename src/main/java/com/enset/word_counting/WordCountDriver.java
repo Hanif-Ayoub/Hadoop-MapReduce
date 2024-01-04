@@ -1,4 +1,4 @@
-package com.slimani_ce.word_counting;
+package com.enset.word_counting;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
